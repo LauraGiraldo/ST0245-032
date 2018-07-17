@@ -1,18 +1,17 @@
 public class Fecha {
-    
-    private final short dia;
-    private final short mes;
-    private final short anyo;
 
-    public Fecha(short dia, short mes, short anyo) {
-        this.dia= dia;
-        this.mes= mes;
-        this.anyo= anyo;
+    private final byte dia;
+    private final byte mes;
+    private final byte anyo;
+
+    public Fecha(byte dia, byte mes, byte anyo) {
+        this.dia = dia;
+        this.mes = mes;
+        this.anyo = anyo;
     }
 
     public int dia() {
         return dia;
-
     }
 
     public int mes() {
@@ -23,21 +22,36 @@ public class Fecha {
         return anyo;
     }
 
-    // -1 si esta fecha es anterior a la otra
-    // 0 si son iguales
-    // 1 si esta fecha es posterior a la otra
     public int comparar(Fecha otra) {
-      if(otra.anio()==anyo && otra.mes()==mes && otra.dia()==dia){
-          return 0;
-      }else{  
-        if(otra.anio()>anyo && otra.mes()>mes && otra.dia()>dia){
+        if (anyo < otra.anio()) {
             return -1;
-        }else{
-            return 1;
         }
-     }
+        if (anyo == otra.anio()) {
+            if (mes < otra.mes()) {
+                return -1;
+            }
+            if (mes > otra.mes()) {
+                return 1;
+            }
+            if (mes == otra.mes()) {
+                if (dia < otra.dia()) {
+                    return -1;
+                }
+                if (dia > otra.dia()) {
+                    return 1;
+                }
 
+                if (dia == otra.dia()) {
+                    return 0;
+                }
+            }
+        }
+
+        return 1;
+    }
+
+    @Override
     public String toString() {
-        return "Fecha: dia "+dia+" mes "+mes+" año "+anyo;
+        return "Fecha: " + dia + "/" + mes + "/" + anyo;
     }
 }
