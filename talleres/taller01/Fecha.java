@@ -35,8 +35,7 @@ public class Fecha {
         }else{
             return 1;
         }
-      }
-    }
+     }
 
     public String toString() {
         return "Fecha: dia "+dia+" mes "+mes+" año "+anyo;
