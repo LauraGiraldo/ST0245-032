@@ -12,6 +12,6 @@ public class Contador {
     }
 
     public String toString() {
-g
+
     }
 }
