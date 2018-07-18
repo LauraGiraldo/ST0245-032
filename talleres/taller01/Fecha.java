@@ -1,10 +1,10 @@
 public class Fecha {
 
-    private final byte dia;
-    private final byte mes;
-    private final byte anyo;
+    private final short dia;
+    private final short mes;
+    private final short anyo;
 
-    public Fecha(byte dia, byte mes, byte anyo) {
+    public Fecha(short dia, short mes, short anyo) {
         this.dia = dia;
         this.mes = mes;
         this.anyo = anyo;
