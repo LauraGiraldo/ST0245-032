@@ -1,0 +1,25 @@
+public class torresHannoi {
+
+    private static void t(int n, int origen, int
+intermedio, int destino) {
+        
+        if(n==1){
+            System.out.println("Ficha "+n+" desde "+origen+" llervarla hasta "+destino);
+        }
+        else{
+           t(n-1,origen,destino,intermedio);
+           System.out.println("Ficha "+n+" desde "+origen+" llervarla hasta "+destino);
+           t(n-1,intermedio,origen,destino);
+           
+        }
+            
+}
+public static void torresDeHannoi(int n) {
+ t(n, 1, 2, 3);
+}
+
+    public static void main(String[] args) {
+        torresDeHannoi(64);
+    }
+    
+}
