@@ -1,0 +1,22 @@
+public static void main(String[] args) throws InterruptedException {
+        for (int i = 1; i <= 20; i++) {
+            int[] cont = new int[i];
+            for (int j = 0; j < cont.length - 1; j++) {
+                cont[j] = j+1;
+
+            }
+            long start = System.currentTimeMillis();
+            sumVol(0, cont, 20);
+            long fin = System.currentTimeMillis();
+            System.out.println(fin - start);
+        }
+    }
+
+    public static boolean sumVol(int start, int[] vol, int capacidad) throws InterruptedException {
+        if (start >= vol.length) {
+            return capacidad == 0;
+        } else {
+            Thread.sleep((long) 0.5);
+            return sumVol(start + 1, vol, capacidad - vol[start]) || sumVol(start + 1, vol, capacidad);
+        }
+    }
