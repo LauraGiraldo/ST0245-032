@@ -1,4 +1,4 @@
-package Taller__6;
+package Array;
 
 import java.util.Arrays;
 
@@ -98,8 +98,10 @@ public class MiArrayList {
                     aux[i] = elements[i];
                 }
             }
+            elements = aux;
             size = size + 1;
         } else {
+            int[] aux = new int[elements.length];
             if (index >= 0 && index < size) {
                 for (int i = 0; i < index; i++) {
                     aux[i] = elements[i];
@@ -110,6 +112,7 @@ public class MiArrayList {
                     aux[i] = elements[i];
                 }
             }
+            elements = aux;
             size = size + 1;
         }
     }
