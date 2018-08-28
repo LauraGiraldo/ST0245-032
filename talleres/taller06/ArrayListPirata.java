@@ -120,6 +120,9 @@ public class MiArrayList {
     *
     */
     public void del(int index){
-        
+         if(0<=index && index<elements.length-1)
+            for(int i=0; i<elements.length-1; i++)
+            elements[index]=elements[index+1];
+       this.size-=1;
     }
 }
