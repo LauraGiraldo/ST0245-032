@@ -1,4 +1,4 @@
-//Ejercicios Array-2
+//Array-2
 
 public int countEvens(int[] nums) {
   int count=0;
@@ -72,7 +72,7 @@ public int sum67(int[] nums) {
   
   return sum;
 }
-//Ejercicios Array-3
+//Array-3
 public int maxSpan(int[] nums) {
         int maxSpan = 0;
         for (int i = 0; i < nums.length; i++) {
