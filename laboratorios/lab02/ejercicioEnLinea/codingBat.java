@@ -87,4 +87,41 @@ public int maxSpan(int[] nums) {
             }
         }
         return maxSpan;
+   }
+
+public int[] fix34(int[] nums) {
+        int[] aux = nums;
+        for (int i = 0; i < aux.length; i++) {
+            if (aux[i] == 3) {
+                if (aux[i + 1] != 4) {
+                    for (int j = 0; j < aux.length; j++) {
+                        if (nums[j] == 4 && nums[j - 1] != 3) {
+                            nums[j] = aux[i + 1];
+                            aux[i + 1] = 4;
+                        }
+                    }
+                }
+            }
+        }
+        return aux;
+    }
+
+public int[] fix45(int[] nums) {
+        int[] aux = nums;
+        for (int i = 0; i < aux.length; i++) {
+            if (aux[i] == 4) {
+                if (aux[i + 1] != 5) {
+                    for (int j = 0; j < aux.length; j++) {
+                        if (j-1 >= 0 && nums[j] == 5 && nums[j - 1] != 4) {
+                            nums[j] = aux[i + 1];
+                            aux[i + 1] = 5;
+                        }else if(j == 0 && nums[j] == 5){
+                          nums[j] = aux[i + 1];
+                            aux[i + 1] = 5;
+                        }
+                    }
+                }
+            }
+        }
+        return aux;
     }
