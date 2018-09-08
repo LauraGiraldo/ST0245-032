@@ -4,7 +4,7 @@ public class Lab2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //20 tamaños para merge sort
+        //merge sort
         for (int i = 1000000; i <= 20000000; i = i + 1000000) {
             int[] a = new int[i];
             for (int j = 0; j < i; j++) {
@@ -15,7 +15,7 @@ public class Lab2 {
             long fin = System.currentTimeMillis();
             System.out.println(fin - start);
         }
-        //20 tamaños para insertion sort
+        //insertion sort
         for (int i = 10000; i <= 200000; i = i + 10000) {
             int[] a = new int[i];
             for (int j = 0; j < i; j++) {
