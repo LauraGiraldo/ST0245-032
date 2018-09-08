@@ -29,22 +29,20 @@ public int bigDiff(int[] nums) {
 }
 
 public int centeredAverage(int[] nums) {
-  int max=nums[0];
-  int min=nums[0];
-  int suma=0;
-  for(int i=0; i< nums.length; i++){
-    if(max < nums[i])
-     max= nums[i];
-    if(min > nums[i])
-     min= nums[i];
-  }
-  
-   for(int i=0; i< nums.length; i++){
-     suma +=nums[i];
-  }
-  return (suma-min-max)/(nums.length-2);
-  
-}
+        int max = nums[0];
+        int min = nums[0];
+        int suma = 0;
+        for (int i = 0; i < nums.length; i++) {
+          suma += nums[i];
+            if (max < nums[i]) {
+                max = nums[i];
+            }
+            if (min > nums[i]) {
+                min = nums[i];
+            }
+        }
+        return (suma - min - max) / (nums.length - 2);
+    }
 
 public int sum13(int[] nums) {
   int sum=0;
