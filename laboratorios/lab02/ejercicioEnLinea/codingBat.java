@@ -145,4 +145,23 @@ public boolean canBalance(int[] nums) {
  return false;
 }
 
+public boolean linearIn(int[] outer, int[] inner) {
+        if (inner.length == 0) {
+            return true;
+        }
+        boolean is = false;
+        for (int i = 0; i < inner.length; i++) {
+            is = false;
+            for (int j = 0; j < outer.length; j++) {
+                if (outer[j] == inner[i]) {
+                    is = true;
+                    break;
+                }
+            }
+            if (!is) {
+                return false;
+            }
+        }
+        return is;
+    }
 
