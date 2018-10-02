@@ -7,13 +7,13 @@ public class UnaTablaDeHash
    * característica se implementará posteriormente.
    */
   int size=0;
-
+   int[] tabla;
    /**
    * Este método define el array utilizado posiciones que nos ingresa el usuario
    * 
    */
    public UnaTablaDeHash(int size){
-       int[] tabla = new int[size];
+       tabla = new int[size];
    }
 
    /**
@@ -35,7 +35,7 @@ public class UnaTablaDeHash
    */
    public int get(String k){
        int laFuncionHashDeK =  funcionHash(k);
-      int[] tabla = null;
+   
        return tabla[laFuncionHashDeK];
    }
 
@@ -46,7 +46,7 @@ public class UnaTablaDeHash
    */
    public void put(String k, int v){
          int laFuncionHashDeK =  funcionHash(k);
-      int[] tabla = null;
+     
          tabla[laFuncionHashDeK] = v;
    }
 }
