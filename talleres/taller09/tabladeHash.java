@@ -1,4 +1,4 @@
-import javafx.util.Pair;
+
 public class UnaTablaDeHash
 {
    /*
@@ -6,14 +6,14 @@ public class UnaTablaDeHash
    * de manera eficiente, por lo cual esta primera versión de hash no implementa colisiones, esta
    * característica se implementará posteriormente.
    */
-
+  int size=0;
 
    /**
    * Este método define el array utilizado posiciones que nos ingresa el usuario
    * 
    */
    public UnaTablaDeHash(int size){
-      tabla = new int[size];
+       int[] tabla = new int[size];
    }
 
    /**
@@ -23,7 +23,7 @@ public class UnaTablaDeHash
    */
    private int funcionHash(String k){
        //return ((int) k.charAt(0)) % size;
-       suma = 0;
+       int suma = 0;
        for(int i = 0; i < k.length(); i++)
          suma += ((int) k.charAt(i)) * i * (int) Math.pow(2,31-i);
        return suma % size;
@@ -35,6 +35,7 @@ public class UnaTablaDeHash
    */
    public int get(String k){
        int laFuncionHashDeK =  funcionHash(k);
+      int[] tabla = null;
        return tabla[laFuncionHashDeK];
    }
 
@@ -45,6 +46,7 @@ public class UnaTablaDeHash
    */
    public void put(String k, int v){
          int laFuncionHashDeK =  funcionHash(k);
+      int[] tabla = null;
          tabla[laFuncionHashDeK] = v;
    }
 }
