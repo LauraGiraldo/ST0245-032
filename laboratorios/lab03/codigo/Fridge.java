@@ -12,4 +12,10 @@ package lab3;
 public class Fridge {
     int code;
     String des;
+
+    public Fridge(int code, String des) {
+        this.code = code;
+        this.des = des;
+    }
+    
 }

@@ -12,4 +12,10 @@ package lab3;
 public class Shops {
     String name;
     int cant;
+
+    public Shops(String name, int cant) {
+        this.name = name;
+        this.cant = cant;
+    }
+    
 }

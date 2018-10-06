@@ -43,6 +43,11 @@ public class Laboratorio3 {
         }
         a.add(9);
         System.out.println(pivot(a));
+        //ejercicio 3
+        Fridge[] fridges = {new Fridge(4,"4"),new Fridge(3,"3"),new Fridge(2,"2"),new Fridge(1,"1")};
+        Shops[] requests = {new Shops("a",1),new Shops("b",1),new Shops("c",1),new Shops("d",1)};
+        exercise3(fridges, requests);
+        
     }
 
     public static void SmartInsert(ArrayList<Integer> l, int data) {
