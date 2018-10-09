@@ -9,7 +9,7 @@
 */
 
 public class BinaryTree {
-	//SI SUBRAYAN QUITEN EL MOUSE POR FAVOR.
+	
 	// Sirve como raíz del árbol
 	public Node root;
 
