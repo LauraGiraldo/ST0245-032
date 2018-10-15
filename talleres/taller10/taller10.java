@@ -35,9 +35,9 @@ public class BinaryTree {
       if(node==null)
         node==temp;
       if (n > node.data)
-         return buscarAux(node.right, n);
+         return InsertarAux(node.right, n);
       if (n < node.data)
-         return buscarAux(node.left, n);
+         return InsertarAux(node.left, n);
          
     }
 
@@ -69,32 +69,6 @@ public class BinaryTree {
          return buscarAux(node.left, n);      
     }
 	
-    /**
-	* @param n el dato del nodo que se busca borrar.
-	* Metodo auxiliar de buscarAux.
-	* 
-	*/
-    public void borrar(int n) {
-        borrarAux(root, n);
-    }
-    
-    /**
-	* @param node es la raíz del arbol
-	* @param n el data del nodo que se busca borrar
-	* nota: metodo recursivo.
-	* borra un dato respetando claro las desigualdades en el árbol
-	*/ 
-     private Node borrarAux(Node node, int n) {
-        //..
-    }
-
-
-
-    /*
-	 
-	 Los metodos posteriores son para imprimir el arbol de manera
-	 que sirven para debuggeo
-    */
 
 	/**
 	* @param node el nodo desde el cual se imprimirá
