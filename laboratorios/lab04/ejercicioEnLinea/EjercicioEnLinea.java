@@ -31,35 +31,7 @@ public class EjercicioEnLinea{
          
     }
 
-    /**
-	* @param n el dato del nodo que se busca.
-	* Metodo auxiliar de buscarAux.
-	* @return true si el metodo buscarAux es true
-	*/
-    public boolean buscar(int n) {
-        return buscarAux(root, n);
-    }
     
-	/**
-	* @param node es la raíz del arbol
-	* @param n el data del nodo que se busca
-	* nota: metodo recursivo.
-	* Inserta un dato respetando claro las desigualdades en el árbol
-	* @return true si se encuentra el elemento en el árbol, false de lo contrario
-	*/ 
-
-	private boolean buscarAux(Node node, int n) {
-	    if (node.data == n)
-         return true;
-      if (node == null)
-         return false;
-      if (n > node.data)
-         return buscarAux(node.right, n); // T(n) = T(n-1) + C
-      else // n < nodo.data
-         return buscarAux(node.left, n);      
-    }
-	
-
 	/**
 	* @param node el nodo desde el cual se imprimirá
 	* imprime el arbol de forma pos orden
