@@ -22,14 +22,14 @@ public class ejercicio2 {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         while (n != 0) {
-            DigraphAL dgal = new DigraphAL(n);
+            DigraphAM g = new DigraphAM(n);
             int arc = sc.nextInt();
             for (int i = 0; i < arc; i++) {
                 int n1 = sc.nextInt();
                 int n2 = sc.nextInt();
-                dgal.addArc(n1, n2, 1);
+                g.addArc(n1, n2, 1);
             }
-            System.out.println(isBicolorable(dgal));
+            System.out.println(isBicolorable(g));
             n = sc.nextInt();
         }
     }
@@ -41,22 +41,19 @@ public class ejercicio2 {
             color[i] = -1;
         }
         color[0] = 1;
-        
-        
-            for (int j = 0; j < n; j++) {
+        for (int j = 0; j < n; j++) {
             for (int i = 0; i < n; i++) {
-                
+
                 if (g.getWeight(j, i) != 0 && color[i] == -1) {
 
                     color[i] = 1 - color[j];
-                    
+
                 } else if (g.getWeight(j, i) != 0 && color[j] == color[i]) {
                     return "NOT BICOLORABLE";
                 }
             }
         }
-            
-        
+
         return "BICOLORABLE";
     }
 }
