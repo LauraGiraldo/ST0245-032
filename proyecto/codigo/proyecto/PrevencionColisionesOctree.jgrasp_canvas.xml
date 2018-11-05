@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Canvas xmlns="http://www.jgrasp.org">
+  <Language>Java</Language>
+  <ShowTypes>false</ShowTypes>
+  <Version>2</Version>
+  <Grid>
+    <Snap>true</Snap>
+    <Show>false</Show>
+  </Grid>
+  <Scope id="1">
+    <Name>colision</Name>
+    <Signature>(Ljava/util/ArrayList;)Ljava/util/ArrayList;</Signature>
+    <DeclaringType>Octree.Octree</DeclaringType>
+    <Depth>3</Depth>
+  </Scope>
+  <Scope id="0">
+    <Name>detectarColisiones</Name>
+    <Signature>([Ljavafx/geometry/Point3D;)Ljava/util/ArrayList;</Signature>
+    <DeclaringType>proyecto.PrevencionColisionesOctree</DeclaringType>
+    <Depth>1</Depth>
+  </Scope>
+  <Frame>
+    <Bounds>
+      <AutoSize>false</AutoSize>
+      <X>20</X>
+      <Y>50</Y>
+      <W>298</W>
+      <H>288</H>
+    </Bounds>
+    <PanelSize>
+      <Key>jgrasp_viewers._X_BasicView0</Key>
+      <Order>4</Order>
+      <W>304</W>
+      <H>322</H>
+    </PanelSize>
+    <PanelSize>
+      <Key>jgrasp_viewers.java__lang__Object_LinkedView0</Key>
+      <Order>3</Order>
+      <W>504</W>
+      <H>182</H>
+    </PanelSize>
+    <Viewer>
+      <ScopeID>0</ScopeID>
+      <Expression>`local Octree.Octree` oct</Expression>
+      <ViewerClass>jgrasp_viewers._X_BasicView</ViewerClass>
+    </Viewer>
+  </Frame>
+  <Frame>
+    <Bounds>
+      <AutoSize>true</AutoSize>
+      <X>360</X>
+      <Y>400</Y>
+      <W>454</W>
+      <H>146</H>
+    </Bounds>
+    <Viewer>
+      <ScopeID>1</ScopeID>
+      <Expression>`local java.util.ArrayList` colisiones</Expression>
+      <ViewerClass>jgrasp_viewers.java__lang__Object_LinkedView</ViewerClass>
+    </Viewer>
+  </Frame>
+  <Size>
+    <W>694</W>
+    <H>735</H>
+  </Size>
+  <ESize>
+    <W>694</W>
+    <H>735</H>
+  </ESize>
+</Canvas>
