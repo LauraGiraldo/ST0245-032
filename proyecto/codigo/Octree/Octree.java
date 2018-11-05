@@ -22,32 +22,7 @@ public class Octree {
         hasChildren = false;
     }
 
-    /*public void insert(Point3D p) {
-        double diag = this.min.distance(this.max);
-        if (this.bees.size() > 7) {
-            createChildren();
-            while (!this.bees.isEmpty()) {
-                Point3D b = bees.poll();
-                int where = where(b);
-                if (where != -1) {
-                    childNodes[where].add(b);
-                    System.out.println("entro");
-                }
-            }
-        } else if(hasChildren) {
-            while (!this.bees.isEmpty()) {
-                Point3D b = bees.poll();
-                int where = where(b);
-                if (where != -1) {
-                    childNodes[where].add(b);
-                    System.out.println("entro");
-                }
-            }
-        }else{
-            this.bees.add(p);
-        }
-
-    }*/
+    
     public void insert(Point3D p) {
             if (hasChildren) {
                 int where = where(p);
